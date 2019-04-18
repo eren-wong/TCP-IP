@@ -9,5 +9,5 @@ aux_source_directory(./src dir_srcs)
 add_subdirectory(./lib)
 
 # hclient
-link_libraries(bin/hclient clientLib)
 add_executable(bin/hclient src/hello_client.c)
+target_link_libraries(bin/hclient clientLib)

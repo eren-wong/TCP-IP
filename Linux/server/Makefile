@@ -102,6 +102,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named bin/fds
+
+# Build rule for target.
+bin/fds: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bin/fds
+.PHONY : bin/fds
+
+# fast build rule for target.
+bin/fds/fast:
+	$(MAKE) -f CMakeFiles/bin/fds.dir/build.make CMakeFiles/bin/fds.dir/build
+.PHONY : bin/fds/fast
+
+#=============================================================================
 # Target rules for targets named bin/hserver
 
 # Build rule for target.
@@ -115,6 +128,32 @@ bin/hserver/fast:
 .PHONY : bin/hserver/fast
 
 #=============================================================================
+# Target rules for targets named bin/lopen
+
+# Build rule for target.
+bin/lopen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bin/lopen
+.PHONY : bin/lopen
+
+# fast build rule for target.
+bin/lopen/fast:
+	$(MAKE) -f CMakeFiles/bin/lopen.dir/build.make CMakeFiles/bin/lopen.dir/build
+.PHONY : bin/lopen/fast
+
+#=============================================================================
+# Target rules for targets named bin/lread
+
+# Build rule for target.
+bin/lread: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bin/lread
+.PHONY : bin/lread
+
+# fast build rule for target.
+bin/lread/fast:
+	$(MAKE) -f CMakeFiles/bin/lread.dir/build.make CMakeFiles/bin/lread.dir/build
+.PHONY : bin/lread/fast
+
+#=============================================================================
 # Target rules for targets named serverLib
 
 # Build rule for target.
@@ -126,6 +165,30 @@ serverLib: cmake_check_build_system
 serverLib/fast:
 	$(MAKE) -f lib/CMakeFiles/serverLib.dir/build.make lib/CMakeFiles/serverLib.dir/build
 .PHONY : serverLib/fast
+
+src/fd_seri.o: src/fd_seri.c.o
+.PHONY : src/fd_seri.o
+
+# target to build an object file
+src/fd_seri.c.o:
+	$(MAKE) -f CMakeFiles/bin/fds.dir/build.make CMakeFiles/bin/fds.dir/src/fd_seri.c.o
+.PHONY : src/fd_seri.c.o
+
+src/fd_seri.i: src/fd_seri.c.i
+.PHONY : src/fd_seri.i
+
+# target to preprocess a source file
+src/fd_seri.c.i:
+	$(MAKE) -f CMakeFiles/bin/fds.dir/build.make CMakeFiles/bin/fds.dir/src/fd_seri.c.i
+.PHONY : src/fd_seri.c.i
+
+src/fd_seri.s: src/fd_seri.c.s
+.PHONY : src/fd_seri.s
+
+# target to generate assembly for a file
+src/fd_seri.c.s:
+	$(MAKE) -f CMakeFiles/bin/fds.dir/build.make CMakeFiles/bin/fds.dir/src/fd_seri.c.s
+.PHONY : src/fd_seri.c.s
 
 src/hello_server.o: src/hello_server.c.o
 .PHONY : src/hello_server.o
@@ -151,19 +214,79 @@ src/hello_server.c.s:
 	$(MAKE) -f CMakeFiles/bin/hserver.dir/build.make CMakeFiles/bin/hserver.dir/src/hello_server.c.s
 .PHONY : src/hello_server.c.s
 
+src/low_open.o: src/low_open.c.o
+.PHONY : src/low_open.o
+
+# target to build an object file
+src/low_open.c.o:
+	$(MAKE) -f CMakeFiles/bin/lopen.dir/build.make CMakeFiles/bin/lopen.dir/src/low_open.c.o
+.PHONY : src/low_open.c.o
+
+src/low_open.i: src/low_open.c.i
+.PHONY : src/low_open.i
+
+# target to preprocess a source file
+src/low_open.c.i:
+	$(MAKE) -f CMakeFiles/bin/lopen.dir/build.make CMakeFiles/bin/lopen.dir/src/low_open.c.i
+.PHONY : src/low_open.c.i
+
+src/low_open.s: src/low_open.c.s
+.PHONY : src/low_open.s
+
+# target to generate assembly for a file
+src/low_open.c.s:
+	$(MAKE) -f CMakeFiles/bin/lopen.dir/build.make CMakeFiles/bin/lopen.dir/src/low_open.c.s
+.PHONY : src/low_open.c.s
+
+src/low_read.o: src/low_read.c.o
+.PHONY : src/low_read.o
+
+# target to build an object file
+src/low_read.c.o:
+	$(MAKE) -f CMakeFiles/bin/lread.dir/build.make CMakeFiles/bin/lread.dir/src/low_read.c.o
+.PHONY : src/low_read.c.o
+
+src/low_read.i: src/low_read.c.i
+.PHONY : src/low_read.i
+
+# target to preprocess a source file
+src/low_read.c.i:
+	$(MAKE) -f CMakeFiles/bin/lread.dir/build.make CMakeFiles/bin/lread.dir/src/low_read.c.i
+.PHONY : src/low_read.c.i
+
+src/low_read.s: src/low_read.c.s
+.PHONY : src/low_read.s
+
+# target to generate assembly for a file
+src/low_read.c.s:
+	$(MAKE) -f CMakeFiles/bin/lread.dir/build.make CMakeFiles/bin/lread.dir/src/low_read.c.s
+.PHONY : src/low_read.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... bin/fds"
 	@echo "... bin/hserver"
+	@echo "... bin/lopen"
+	@echo "... bin/lread"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... serverLib"
+	@echo "... src/fd_seri.o"
+	@echo "... src/fd_seri.i"
+	@echo "... src/fd_seri.s"
 	@echo "... src/hello_server.o"
 	@echo "... src/hello_server.i"
 	@echo "... src/hello_server.s"
+	@echo "... src/low_open.o"
+	@echo "... src/low_open.i"
+	@echo "... src/low_open.s"
+	@echo "... src/low_read.o"
+	@echo "... src/low_read.i"
+	@echo "... src/low_read.s"
 .PHONY : help
 
 
