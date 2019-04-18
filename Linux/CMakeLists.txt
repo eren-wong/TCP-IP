@@ -1,5 +1,8 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
-#AUX_SOURCE_DIRECTORY(. DIR_SRCS)
+project(tcp_ip)
 
-ADD_SUBDIRECTORY(./server)
-ADD_SUBDIRECTORY(./client)
+CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+
+execute_process(
+    COMMAND cmake ./server
+    COMMAND cmake ./client
+)

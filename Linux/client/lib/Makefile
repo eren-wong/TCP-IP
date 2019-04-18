@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zhaoxiao/桌面/TCP-IP/Linux
+CMAKE_SOURCE_DIR = /home/zhaoxiao/桌面/TCP-IP/Linux/client
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zhaoxiao/桌面/TCP-IP/Linux
+CMAKE_BINARY_DIR = /home/zhaoxiao/桌面/TCP-IP/Linux/client
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,14 +72,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(CMAKE_COMMAND) -E cmake_progress_start /home/zhaoxiao/桌面/TCP-IP/Linux/CMakeFiles /home/zhaoxiao/桌面/TCP-IP/Linux/client/lib/CMakeFiles/progress.marks
-	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f CMakeFiles/Makefile2 client/lib/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhaoxiao/桌面/TCP-IP/Linux/CMakeFiles 0
+	cd /home/zhaoxiao/桌面/TCP-IP/Linux/client && $(CMAKE_COMMAND) -E cmake_progress_start /home/zhaoxiao/桌面/TCP-IP/Linux/client/CMakeFiles /home/zhaoxiao/桌面/TCP-IP/Linux/client/lib/CMakeFiles/progress.marks
+	cd /home/zhaoxiao/桌面/TCP-IP/Linux/client && $(MAKE) -f CMakeFiles/Makefile2 lib/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhaoxiao/桌面/TCP-IP/Linux/client/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f CMakeFiles/Makefile2 client/lib/clean
+	cd /home/zhaoxiao/桌面/TCP-IP/Linux/client && $(MAKE) -f CMakeFiles/Makefile2 lib/clean
 .PHONY : clean
 
 # The main clean target
@@ -88,31 +88,31 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f CMakeFiles/Makefile2 client/lib/preinstall
+	cd /home/zhaoxiao/桌面/TCP-IP/Linux/client && $(MAKE) -f CMakeFiles/Makefile2 lib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f CMakeFiles/Makefile2 client/lib/preinstall
+	cd /home/zhaoxiao/桌面/TCP-IP/Linux/client && $(MAKE) -f CMakeFiles/Makefile2 lib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/zhaoxiao/桌面/TCP-IP/Linux/client && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-client/lib/CMakeFiles/clientLib.dir/rule:
-	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f CMakeFiles/Makefile2 client/lib/CMakeFiles/clientLib.dir/rule
-.PHONY : client/lib/CMakeFiles/clientLib.dir/rule
+lib/CMakeFiles/clientLib.dir/rule:
+	cd /home/zhaoxiao/桌面/TCP-IP/Linux/client && $(MAKE) -f CMakeFiles/Makefile2 lib/CMakeFiles/clientLib.dir/rule
+.PHONY : lib/CMakeFiles/clientLib.dir/rule
 
 # Convenience name for target.
-clientLib: client/lib/CMakeFiles/clientLib.dir/rule
+clientLib: lib/CMakeFiles/clientLib.dir/rule
 .PHONY : clientLib
 
 # fast build rule for target.
 clientLib/fast:
-	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f client/lib/CMakeFiles/clientLib.dir/build.make client/lib/CMakeFiles/clientLib.dir/build
+	cd /home/zhaoxiao/桌面/TCP-IP/Linux/client && $(MAKE) -f lib/CMakeFiles/clientLib.dir/build.make lib/CMakeFiles/clientLib.dir/build
 .PHONY : clientLib/fast
 
 error_handling.o: error_handling.c.o
@@ -120,7 +120,7 @@ error_handling.o: error_handling.c.o
 
 # target to build an object file
 error_handling.c.o:
-	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f client/lib/CMakeFiles/clientLib.dir/build.make client/lib/CMakeFiles/clientLib.dir/error_handling.c.o
+	cd /home/zhaoxiao/桌面/TCP-IP/Linux/client && $(MAKE) -f lib/CMakeFiles/clientLib.dir/build.make lib/CMakeFiles/clientLib.dir/error_handling.c.o
 .PHONY : error_handling.c.o
 
 error_handling.i: error_handling.c.i
@@ -128,7 +128,7 @@ error_handling.i: error_handling.c.i
 
 # target to preprocess a source file
 error_handling.c.i:
-	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f client/lib/CMakeFiles/clientLib.dir/build.make client/lib/CMakeFiles/clientLib.dir/error_handling.c.i
+	cd /home/zhaoxiao/桌面/TCP-IP/Linux/client && $(MAKE) -f lib/CMakeFiles/clientLib.dir/build.make lib/CMakeFiles/clientLib.dir/error_handling.c.i
 .PHONY : error_handling.c.i
 
 error_handling.s: error_handling.c.s
@@ -136,7 +136,7 @@ error_handling.s: error_handling.c.s
 
 # target to generate assembly for a file
 error_handling.c.s:
-	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f client/lib/CMakeFiles/clientLib.dir/build.make client/lib/CMakeFiles/clientLib.dir/error_handling.c.s
+	cd /home/zhaoxiao/桌面/TCP-IP/Linux/client && $(MAKE) -f lib/CMakeFiles/clientLib.dir/build.make lib/CMakeFiles/clientLib.dir/error_handling.c.s
 .PHONY : error_handling.c.s
 
 # Help Target
@@ -162,6 +162,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/zhaoxiao/桌面/TCP-IP/Linux/client && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -101,58 +101,6 @@ depend:
 	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named bin/hserver
-
-# Build rule for target.
-bin/hserver: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bin/hserver
-.PHONY : bin/hserver
-
-# fast build rule for target.
-bin/hserver/fast:
-	$(MAKE) -f server/CMakeFiles/bin/hserver.dir/build.make server/CMakeFiles/bin/hserver.dir/build
-.PHONY : bin/hserver/fast
-
-#=============================================================================
-# Target rules for targets named serverLib
-
-# Build rule for target.
-serverLib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 serverLib
-.PHONY : serverLib
-
-# fast build rule for target.
-serverLib/fast:
-	$(MAKE) -f server/lib/CMakeFiles/serverLib.dir/build.make server/lib/CMakeFiles/serverLib.dir/build
-.PHONY : serverLib/fast
-
-#=============================================================================
-# Target rules for targets named bin/hclient
-
-# Build rule for target.
-bin/hclient: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bin/hclient
-.PHONY : bin/hclient
-
-# fast build rule for target.
-bin/hclient/fast:
-	$(MAKE) -f client/CMakeFiles/bin/hclient.dir/build.make client/CMakeFiles/bin/hclient.dir/build
-.PHONY : bin/hclient/fast
-
-#=============================================================================
-# Target rules for targets named clientLib
-
-# Build rule for target.
-clientLib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 clientLib
-.PHONY : clientLib
-
-# fast build rule for target.
-clientLib/fast:
-	$(MAKE) -f client/lib/CMakeFiles/clientLib.dir/build.make client/lib/CMakeFiles/clientLib.dir/build
-.PHONY : clientLib/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -161,10 +109,6 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... bin/hserver"
-	@echo "... serverLib"
-	@echo "... bin/hclient"
-	@echo "... clientLib"
 .PHONY : help
 
 

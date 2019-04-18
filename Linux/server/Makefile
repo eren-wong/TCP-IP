@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zhaoxiao/桌面/TCP-IP/Linux
+CMAKE_SOURCE_DIR = /home/zhaoxiao/桌面/TCP-IP/Linux/server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zhaoxiao/桌面/TCP-IP/Linux
+CMAKE_BINARY_DIR = /home/zhaoxiao/桌面/TCP-IP/Linux/server
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,14 +72,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(CMAKE_COMMAND) -E cmake_progress_start /home/zhaoxiao/桌面/TCP-IP/Linux/CMakeFiles /home/zhaoxiao/桌面/TCP-IP/Linux/server/CMakeFiles/progress.marks
-	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f CMakeFiles/Makefile2 server/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhaoxiao/桌面/TCP-IP/Linux/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhaoxiao/桌面/TCP-IP/Linux/server/CMakeFiles /home/zhaoxiao/桌面/TCP-IP/Linux/server/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhaoxiao/桌面/TCP-IP/Linux/server/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f CMakeFiles/Makefile2 server/clean
+	$(MAKE) -f CMakeFiles/Makefile2 clean
 .PHONY : clean
 
 # The main clean target
@@ -88,39 +88,51 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f CMakeFiles/Makefile2 server/preinstall
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f CMakeFiles/Makefile2 server/preinstall
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-# Convenience name for target.
-server/CMakeFiles/bin/hserver.dir/rule:
-	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f CMakeFiles/Makefile2 server/CMakeFiles/bin/hserver.dir/rule
-.PHONY : server/CMakeFiles/bin/hserver.dir/rule
+#=============================================================================
+# Target rules for targets named bin/hserver
 
-# Convenience name for target.
-bin/hserver: server/CMakeFiles/bin/hserver.dir/rule
+# Build rule for target.
+bin/hserver: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bin/hserver
 .PHONY : bin/hserver
 
 # fast build rule for target.
 bin/hserver/fast:
-	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f server/CMakeFiles/bin/hserver.dir/build.make server/CMakeFiles/bin/hserver.dir/build
+	$(MAKE) -f CMakeFiles/bin/hserver.dir/build.make CMakeFiles/bin/hserver.dir/build
 .PHONY : bin/hserver/fast
+
+#=============================================================================
+# Target rules for targets named serverLib
+
+# Build rule for target.
+serverLib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 serverLib
+.PHONY : serverLib
+
+# fast build rule for target.
+serverLib/fast:
+	$(MAKE) -f lib/CMakeFiles/serverLib.dir/build.make lib/CMakeFiles/serverLib.dir/build
+.PHONY : serverLib/fast
 
 src/hello_server.o: src/hello_server.c.o
 .PHONY : src/hello_server.o
 
 # target to build an object file
 src/hello_server.c.o:
-	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f server/CMakeFiles/bin/hserver.dir/build.make server/CMakeFiles/bin/hserver.dir/src/hello_server.c.o
+	$(MAKE) -f CMakeFiles/bin/hserver.dir/build.make CMakeFiles/bin/hserver.dir/src/hello_server.c.o
 .PHONY : src/hello_server.c.o
 
 src/hello_server.i: src/hello_server.c.i
@@ -128,7 +140,7 @@ src/hello_server.i: src/hello_server.c.i
 
 # target to preprocess a source file
 src/hello_server.c.i:
-	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f server/CMakeFiles/bin/hserver.dir/build.make server/CMakeFiles/bin/hserver.dir/src/hello_server.c.i
+	$(MAKE) -f CMakeFiles/bin/hserver.dir/build.make CMakeFiles/bin/hserver.dir/src/hello_server.c.i
 .PHONY : src/hello_server.c.i
 
 src/hello_server.s: src/hello_server.c.s
@@ -136,7 +148,7 @@ src/hello_server.s: src/hello_server.c.s
 
 # target to generate assembly for a file
 src/hello_server.c.s:
-	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f server/CMakeFiles/bin/hserver.dir/build.make server/CMakeFiles/bin/hserver.dir/src/hello_server.c.s
+	$(MAKE) -f CMakeFiles/bin/hserver.dir/build.make CMakeFiles/bin/hserver.dir/src/hello_server.c.s
 .PHONY : src/hello_server.c.s
 
 # Help Target
@@ -148,6 +160,7 @@ help:
 	@echo "... bin/hserver"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... serverLib"
 	@echo "... src/hello_server.o"
 	@echo "... src/hello_server.i"
 	@echo "... src/hello_server.s"
@@ -162,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
