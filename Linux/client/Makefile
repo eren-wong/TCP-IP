@@ -72,14 +72,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhaoxiao/桌面/TCP-IP/Linux/CMakeFiles /home/zhaoxiao/桌面/TCP-IP/Linux/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(CMAKE_COMMAND) -E cmake_progress_start /home/zhaoxiao/桌面/TCP-IP/Linux/CMakeFiles /home/zhaoxiao/桌面/TCP-IP/Linux/client/CMakeFiles/progress.marks
+	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f CMakeFiles/Makefile2 client/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhaoxiao/桌面/TCP-IP/Linux/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f CMakeFiles/Makefile2 client/clean
 .PHONY : clean
 
 # The main clean target
@@ -88,70 +88,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f CMakeFiles/Makefile2 client/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f CMakeFiles/Makefile2 client/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named bin/hserver
+# Convenience name for target.
+client/CMakeFiles/bin/hclient.dir/rule:
+	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f CMakeFiles/Makefile2 client/CMakeFiles/bin/hclient.dir/rule
+.PHONY : client/CMakeFiles/bin/hclient.dir/rule
 
-# Build rule for target.
-bin/hserver: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bin/hserver
-.PHONY : bin/hserver
-
-# fast build rule for target.
-bin/hserver/fast:
-	$(MAKE) -f server/CMakeFiles/bin/hserver.dir/build.make server/CMakeFiles/bin/hserver.dir/build
-.PHONY : bin/hserver/fast
-
-#=============================================================================
-# Target rules for targets named serverLib
-
-# Build rule for target.
-serverLib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 serverLib
-.PHONY : serverLib
-
-# fast build rule for target.
-serverLib/fast:
-	$(MAKE) -f server/lib/CMakeFiles/serverLib.dir/build.make server/lib/CMakeFiles/serverLib.dir/build
-.PHONY : serverLib/fast
-
-#=============================================================================
-# Target rules for targets named bin/hclient
-
-# Build rule for target.
-bin/hclient: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bin/hclient
+# Convenience name for target.
+bin/hclient: client/CMakeFiles/bin/hclient.dir/rule
 .PHONY : bin/hclient
 
 # fast build rule for target.
 bin/hclient/fast:
-	$(MAKE) -f client/CMakeFiles/bin/hclient.dir/build.make client/CMakeFiles/bin/hclient.dir/build
+	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f client/CMakeFiles/bin/hclient.dir/build.make client/CMakeFiles/bin/hclient.dir/build
 .PHONY : bin/hclient/fast
 
-#=============================================================================
-# Target rules for targets named clientLib
+src/hello_client.o: src/hello_client.c.o
+.PHONY : src/hello_client.o
 
-# Build rule for target.
-clientLib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 clientLib
-.PHONY : clientLib
+# target to build an object file
+src/hello_client.c.o:
+	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f client/CMakeFiles/bin/hclient.dir/build.make client/CMakeFiles/bin/hclient.dir/src/hello_client.c.o
+.PHONY : src/hello_client.c.o
 
-# fast build rule for target.
-clientLib/fast:
-	$(MAKE) -f client/lib/CMakeFiles/clientLib.dir/build.make client/lib/CMakeFiles/clientLib.dir/build
-.PHONY : clientLib/fast
+src/hello_client.i: src/hello_client.c.i
+.PHONY : src/hello_client.i
+
+# target to preprocess a source file
+src/hello_client.c.i:
+	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f client/CMakeFiles/bin/hclient.dir/build.make client/CMakeFiles/bin/hclient.dir/src/hello_client.c.i
+.PHONY : src/hello_client.c.i
+
+src/hello_client.s: src/hello_client.c.s
+.PHONY : src/hello_client.s
+
+# target to generate assembly for a file
+src/hello_client.c.s:
+	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(MAKE) -f client/CMakeFiles/bin/hclient.dir/build.make client/CMakeFiles/bin/hclient.dir/src/hello_client.c.s
+.PHONY : src/hello_client.c.s
 
 # Help Target
 help:
@@ -159,12 +145,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... bin/hclient"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... bin/hserver"
-	@echo "... serverLib"
-	@echo "... bin/hclient"
-	@echo "... clientLib"
+	@echo "... src/hello_client.o"
+	@echo "... src/hello_client.i"
+	@echo "... src/hello_client.s"
 .PHONY : help
 
 
@@ -176,6 +162,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/zhaoxiao/桌面/TCP-IP/Linux && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
