@@ -1,6 +1,6 @@
 #define _WINSOCK_DEPRECATED_NO_WARNINGS
 
-#include <error_handling.h>
+#include <lib/error_handling.h>
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
     strLen = recv(hSocket, message, sizeof(message) - 1, 0);
     if (strLen == -1)
     {
-        ErrorHandling("read() error!");
+        ErrorHandling("recv() error!");
     }
 
     printf("Message from server: %s\n", message);

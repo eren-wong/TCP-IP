@@ -1,4 +1,4 @@
 ﻿  error_handling.c
-  hello_client_win.c
+  tcp_client_win.c
   正在生成代码...
-  Client.vcxproj -> G:\Project\TCP-IP\Windows\x64\Debug\Client.exe
+  Client.vcxproj -> E:\Project\TCP-IP\Windows\x64\Debug\Client.exe

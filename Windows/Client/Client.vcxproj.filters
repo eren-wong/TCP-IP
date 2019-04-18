@@ -18,7 +18,7 @@
     <ClCompile Include="lib\error_handling.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\hello_client_win.c">
+    <ClCompile Include="src\tcp_client_win.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
